@@ -17,7 +17,7 @@ frame_height = int(cap.get(4))
 
 fourcc = cv2.VideoWriter_fourcc(*'MP4V')
 video_filename = os.path.join("output", f'video_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.mp4')
-out = cv2.VideoWriter(video_filename, fourcc, 20.0, (frame_width, frame_height))
+out = cv2.VideoWriter(video_filename, fourcc, 20, (frame_width, frame_height))
 
 _, frame1 = cap.read()
 _, frame2 = cap.read()
